@@ -1,0 +1,19 @@
+<h3>{{title}}</h3>
+<ul>
+  <li *ngFor='let course of courses'>
+    {{course}}
+  </li>
+</ul>
+<img [src]="imageUrl" alt=''>
+<table>
+  <tr>
+    <td [attr.colspan]='colsPan'></td>
+  </tr>
+</table>
+<button class='btn btn-primary' [style.backgroundColor]='isActive ? "red" : "green"'>styleBinding</button>
+<button class='btn btn-dark' [class.active]='isActive'>classBinding</button>
+
+<div (click)='divClicked()'>
+  <button class='btn btn-danger' (click)='onSave($event)'>evBinding</button>
+</div>
+
