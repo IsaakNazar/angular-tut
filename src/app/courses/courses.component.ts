@@ -8,7 +8,7 @@ import {CoursesService} from '../courses.service';
 })
 export class CoursesComponent implements OnInit {
   title = 'list of Courses';
-  imageUrl = 'https://static.euronews.com/articles/stories/03/21/73/66/880x495_cmsv2_298e3b01-877d-57e3-9ce0-0542084c5af4-3217366.jpg';
+  imageUrl = 'https://i.guim.co.uk/img/media/16dcfd2ae3e0d3c5a7c37bd4805237c333ef6412/0_15_2835_1701/master/2835.jpg?width=300&quality=85&auto=format&fit=max&s=1401a2f95bb7eeecd417c421fdd2915d';
   courses;
   colsPan = 2;
   isActive = true;
@@ -20,7 +20,12 @@ export class CoursesComponent implements OnInit {
   divClicked() {
     console.log('div clicked');
   }
-
+  // onKeyUp(ev) {
+  //   if (ev.keyCode === 13) { console.log('enter was pressed'); }
+  // }
+  onKeyUp() {
+     console.log('enter was pressed');
+    }
   constructor(courseService: CoursesService) {
     this.courses = courseService.getCourses();
   }
